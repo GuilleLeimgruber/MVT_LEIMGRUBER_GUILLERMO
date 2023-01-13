@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: black;">Listado de familiares</h1>
+    {% for familiar in familiares %}
+    <p><h3 style="color: blue;"> Nombre y Apellido: {{familiar.nombre}} </h3></p>
+    <p><h3 style="color: blue;"> Edad: {{familiar.edad}} </h3></p>
+    {% if familiar.trabaja == True %}
+    <p><h3 style="color: blue;">Actualmente si trabaja</h3></p>
+
+    {% else %}
+    <p><h3 style="color: brown;">Actualmente no trabaja</h3></p>
+
+    {%endif%}
+
+    {%endfor%}
+
+</body>
+</html>
